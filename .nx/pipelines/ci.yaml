@@ -17,5 +17,7 @@ workflows:
     # workers: 3
     steps:
       - name: Run affected tasks
+        env:
+          NX_NO_CLOUD: 'true'
         script: |
           npx nx affected -t lint test build
