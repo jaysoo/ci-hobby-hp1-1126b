@@ -1,0 +1,15 @@
+{
+  "name": "@org/e2e",
+  "version": "0.0.0",
+  "private": true,
+  "nx": {
+    "targets": {
+      "e2e": {
+        "command": "playwright test",
+        "options": {
+          "cwd": "{projectRoot}"
+        }
+      }
+    }
+  }
+}
