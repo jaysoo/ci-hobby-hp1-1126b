@@ -19,3 +19,12 @@ workflows:
       - name: Run affected tasks
         script: |
           npx nx affected -t lint test build
+
+  probe:
+    runs-on: linux-large-js
+    steps:
+      - name: What the image has
+        script: |
+          for c in jq pwsh cargo rustc python3 java docker; do printf '%s: ' $c; command -v $c || echo MISSING; done
+          echo "ms-playwright cache:"; ls ~/.cache/ms-playwright 2>&1 || true
+          echo "Cypress cache:"; ls ~/.cache/Cypress 2>&1 || true
