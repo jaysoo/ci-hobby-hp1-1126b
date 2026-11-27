@@ -1,0 +1,12 @@
+{
+  "name": "rusty",
+  "root": "packages/rusty",
+  "targets": {
+    "test": {
+      "command": "cargo test",
+      "options": {
+        "cwd": "packages/rusty"
+      }
+    }
+  }
+}

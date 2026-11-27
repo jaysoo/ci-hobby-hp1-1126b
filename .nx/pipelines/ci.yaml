@@ -9,7 +9,7 @@ triggers:
 
 workflows:
   main:
-    runs-on: linux-large-js
+    runs-on: universal-large
     # Tasks run on this one machine, which fits most workspaces.
     # For a large workspace, uncomment workers to add 3 more machines like this one.
     # They start with every run: large runs can finish sooner, and runs usually use more credits.
