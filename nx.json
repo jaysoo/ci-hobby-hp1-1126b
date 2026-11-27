@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "production": [
       "default",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
@@ -52,15 +55,28 @@
     }
   ],
   "release": {
-    "projects": ["!utils", "!@org/source"],
+    "projects": [
+      "!utils",
+      "!@org/source"
+    ],
     "version": {
       "preVersionCommand": "npx nx run-many -t build"
     }
   },
   "targetDefaults": {
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     }
   },
-  "analytics": false
+  "analytics": false,
+  "nxCloudId": "6b088d77b6e1c130a9b177d4",
+  "nxCloudUrl": "https://staging.nx.app",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {}
+    }
+  }
 }
