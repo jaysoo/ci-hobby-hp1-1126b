@@ -18,4 +18,4 @@ workflows:
     steps:
       - name: Run affected tasks
         script: |
-          npx nx affected -t lint test build
+          npx nx affected -t lint test build e2e
